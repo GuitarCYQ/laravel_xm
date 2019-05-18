@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="500px" viewBox="0 0 600 500" enable-background="new 0 0 600 500" xml:space="preserve">
+<g>
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="118.6367" y1="379.0322" x2="3432.5701" y2="379.0322" gradientTransform="matrix(0.9432 0 0 -0.9432 -120.9314 608.7197)">
+			<stop  offset="0.0015" style="stop-color:#DA8CFF"/>
+			<stop  offset="1" style="stop-color:#9A55FF"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M525.827,233.853L306.479,124.409c-5.589-2.794-11.643-2.794-17.23,0L69.896,233.853
+			c-6.519,3.26-10.711,10.246-10.711,17.229c0,7.454,4.193,13.974,10.711,17.232l219.352,109.909
+			c2.794,1.394,5.587,1.861,8.848,1.861c2.794,0,6.053-0.468,8.85-1.861l219.349-109.446c6.52-3.259,10.709-9.778,10.709-17.228
+			C536.541,244.099,532.347,237.112,525.827,233.853z M297.63,339.568l-176.039-88.486l176.039-88.018l176.038,88.018
+			L297.63,339.568z"/>
+	</g>
+</g>
+<g>
+	<g>
+		
+			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-207.708" y1="31.4951" x2="2918.1541" y2="31.4951" gradientTransform="matrix(0.0165 0.9999 -0.9999 0.0165 326.6766 151.2767)">
+			<stop  offset="0.0015" style="stop-color:#DA8CFF"/>
+			<stop  offset="1" style="stop-color:#9A55FF"/>
+		</linearGradient>
+		<path fill="url(#SVGID_2_)" d="M317.938,478.613l105.808-221.128c2.698-5.634,2.597-11.688-0.291-17.23L310.403,22.743
+			c-3.372-6.463-10.423-10.54-17.406-10.424c-7.452,0.123-13.901,4.424-17.052,10.996L169.676,244.453
+			c-1.347,2.815-1.77,5.617-1.714,8.877c0.046,2.796,0.567,6.046,2.007,8.817l113.058,217.508
+			c3.366,6.466,9.953,10.551,17.403,10.425C307.871,489.497,314.785,485.186,317.938,478.613z M208.464,252.194l85.564-177.477
+			l90.915,174.559l-85.096,177.467L208.464,252.194z"/>
+	</g>
+</g>
+</svg>
