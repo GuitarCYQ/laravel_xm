@@ -56,8 +56,12 @@ Route::prefix('admin')->name('admin.')->group(function  ()  {
         Route::get("/createzx","Admin\PageController@createzx")->name("page.createzx");
         Route::get("/createlc","Admin\PageController@createlc")->name("page.createlc");
         Route::get("/licheng","Admin\PageController@licheng")->name("page.licheng");
-
+        Route::get("/editlc/{page}","Admin\PageController@editlc")->name('page.editlc');
+		Route::get("/editzx/{page}","Admin\PageController@editzx")->name('page.editzx');
     });
+
+    //轮播图模块
+    Route::resource("/banner","Admin\BannerController")->except(['show']);
 
 
 

@@ -88,7 +88,7 @@
                     </a>
                     <div class="collapse" id="ui-banner">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="">轮播图列表</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.banner.index')}}">轮播图列表</a></li>
                             <li class="nav-item"> <a class="nav-link" href="">轮播图分类</a></li>
                         </ul>
                     </div>

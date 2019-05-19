@@ -49,7 +49,8 @@
         setTimeout(function(){
             var ue = UE.getEditor('contents', {
                 autoHeight: false,
-                initialFrameHeight:300
+                initialFrameHeight:300,
+                initialFrameWidth:850,
             });
         },1000)
     </script>

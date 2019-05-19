@@ -54,7 +54,7 @@ class PageController extends Controller
     //历程
     public function createlc()
     {
-        return view("admin.page,createlc");
+        return view("admin.page.createlc");
     }
 
     /**
@@ -78,17 +78,14 @@ class PageController extends Controller
         switch ($request->type){
             case "1":
                 $result = Page::updateOrCreate(['type'=>1],$data);
-                checkreturn($result instanceof Page,"更新");
                 return redirect(route('admin.page.create'));
                 break;
             case "2":
                 $result = Page::updateOrCreate(['title'=>$request->title],$data);
-                checkreturn($result instanceof Page,"添加");
                 return redirect(route('admin.page.index'));
                 break;
             case "3":
                 $result = Page::updateOrCreate(['title'=>$request->title],$data);
-                checkreturn($result instanceof Page,"添加");
                 return redirect(route('admin.page.licheng'));
                 break;
         }
@@ -111,9 +108,21 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(){
+
+    }
+
+    //编辑招贤
+    public function editzx(Page $page)
     {
-        //
+        return view('admin.page.editzx')->with('page',$page);
+    }
+
+    //编辑历程
+    public function editlc(Page $page)
+    {
+        
+        return view('admin.page.editlc')->with('page',$page);
     }
 
     /**
@@ -123,9 +132,22 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StorePagePost $request, $id)
     {
-        //
+        $PageModel = Page::find($id);
+        $PageModel->title = $request->title;
+        $PageModel->content = $request->contents;
+        if($request->file("file")){
+            $PageModel->pic = $request->file('file')->store('page');
+            //删除旧图片
+            Storage::delete($request->pic);
+        }
+        $PageModel->save();
+        if($request->type==2){
+            return redirect(route('admin.page.index'));
+        }else{
+            return redirect(route('admin.page.licheng'));
+        }
     }
 
     /**
@@ -134,8 +156,13 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Page $page)
     {
-        //
+        $page->delete();
+        if($page->type==2){
+            return redirect(route('admin.page.index'));
+        }else{
+            return redirect(route('admin.page.licheng'));
+        }
     }
 }
