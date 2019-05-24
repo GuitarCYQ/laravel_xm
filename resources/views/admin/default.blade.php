@@ -248,14 +248,14 @@
     setbannersort();
     $(document).on('pjax:send',  function()  {
         $('#loading').show()
-    })
+    });
 
     $(document).on('pjax:complete',  function()  {
-        $('#loading').hide()
+        $('#loading').hide();
         changefile();
         checkedall();
         setbannersort();
-    })
+    });
 
     function  checkedall(){
         $("#ischecked").on('click',function(){

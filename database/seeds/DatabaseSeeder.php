@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(NewsTableSeeder::class);//运用News的填充文件
+        $this->call(ManagersTableSeeder::class);//运用User的填充文件
     }
 }

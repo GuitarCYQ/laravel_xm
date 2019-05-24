@@ -61,7 +61,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route("admin.case.index")}}" class="nav-link">
+                    <a href="{{route('admin.case.index')}}" class="nav-link">
                         <span class="menu-title">案例管理</span>
                         <i class="mdi mdi-cube-send menu-icon"></i>
                     </a>
@@ -74,9 +74,9 @@
                     </a>
                     <div class="collapse" id="ui-page">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{route("admin.page.create")}}">公司简介</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{route("admin.page.index")}}">招贤纳士</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{route("admin.page.licheng")}}">发展历程</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.page.create')}}">公司简介</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.page.index')}}">招贤纳士</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.page.licheng')}}">发展历程</a></li>
                         </ul>
                     </div>
                 </li>
@@ -89,12 +89,12 @@
                     <div class="collapse" id="ui-banner">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"> <a class="nav-link" href="{{route('admin.banner.index')}}">轮播图列表</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="">轮播图分类</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.banneritem.index')}}">轮播图分类</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('admin.friend.index')}}" class="nav-link">
                         <span class="menu-title">友情连接管理</span>
                         <i class="mdi mdi-cube-send menu-icon"></i>
                     </a>

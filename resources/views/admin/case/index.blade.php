@@ -61,7 +61,7 @@
                                         <td class="text-center">{{ $item->created_at }}</td>
                                         <td class="text-center">
                                             <a class="btn btn-success btn-xs" href="{{ route('admin.case.edit',['case'=>$item->id]) }}" role="button">编辑</a>
-                                            <a class="btn btn-danger btn-xs" href="javascript:;" onclick="dosubmit({{$item->id}})" role="button">删除</a>
+                                            <a class="btn btn-danger btn-xs" href="javascript:" onclick="dosubmit({{$item->id}})" role="button">删除</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -311,7 +311,7 @@
               radius: 0
             }
           }
-      })
+      });
       $("#visit-sale-chart-legend").html(myChart.generateLegend());
     }
     if ($("#traffic-chart").length) {
@@ -379,7 +379,7 @@
               if (trafficChartData.labels[i]) { 
                   text.push(trafficChartData.labels[i]); 
               }
-              text.push('<span class="float-right">'+trafficChartData.datasets[0].data[i]+"%"+'</span>')
+              text.push('<span class="float-right">'+trafficChartData.datasets[0].data[i]+"%"+'</span>');
               text.push('</li>'); 
           } 
           text.push('</ul>'); 

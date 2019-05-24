@@ -30,6 +30,15 @@ class StoreCasesPost extends FormRequest
         ];
     }
 
+    public function messages(){
+        return[
+            'title.required' => '标题不能为空',
+            'remark.required' => '摘要不能为空',
+            'file.image' => '文件上传只能是图片',
+        ];
+    }
+
+
     public function attributes()
     {
         return [

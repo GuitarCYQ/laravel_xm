@@ -29,7 +29,7 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
   //轮播文字
   $(function(){
     $('.banner').children('.title').addClass('active');
-  })
+  });
 
   //导航切换
   var btn = $('.nav').find('.nav-list').children('button')
@@ -83,13 +83,13 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
         span.html(spanTxt);
       }else{
         span.html(span.html().substring(0, 42)+ '...')
-      };
-      $(window).resize(function(){   
+      }
+        $(window).resize(function(){   
         if(document.body.clientWidth > 463){
           span.html(spanTxt);
         }else{
           span.html(span.html().substring(0, 42)+ '...')
-        };
+        }
       });
     });
   });  

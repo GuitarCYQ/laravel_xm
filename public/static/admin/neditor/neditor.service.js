@@ -14,7 +14,7 @@ UE.Editor.prototype.getActionUrl = function(action) {
     } else {
         return this._bkGetActionUrl.call(this, action);
     }
-}
+};
 
 /**
  * 图片上传service
@@ -175,7 +175,7 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
             });
         }
     }
-}
+};
 
 /**
  * 附件上传service

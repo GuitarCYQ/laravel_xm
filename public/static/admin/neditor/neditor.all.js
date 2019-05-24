@@ -4742,15 +4742,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, "g");
  * @module UE.dom
  */
 
-/**
- * Range实现类，本类是UEditor底层核心类，封装不同浏览器之间的Range操作。
- * @unfile
- * @module UE.dom
- * @class Range
- */
 
-;(function() {
-  var guid = 0,
+(function () {
+    var guid = 0,
     fillChar = domUtils.fillChar,
     fillData;
 
@@ -6721,14 +6715,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, "g");
  * @since 1.2.6.1
  */
 
-/**
- * 选区集合
- * @unfile
- * @module UE.dom
- * @class Selection
- */
-;(function() {
-  function getBoundaryInformation(range, start) {
+
+(function () {
+    function getBoundaryInformation(range, start) {
     var getIndex = domUtils.getNodeIndex;
     range = range.duplicate();
     range.collapse(start);
@@ -7147,15 +7136,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, "g");
  * @module UE
  */
 
-/**
- * UEditor的核心类，为用户提供与编辑器交互的接口。
- * @unfile
- * @module UE
- * @class Editor
- */
 
-;(function() {
-  var uid = 0,
+(function () {
+    var uid = 0,
     _selectionChangeTimer;
 
   /**
@@ -8872,8 +8855,8 @@ UE.Editor.defaultOptions = function(editor) {
 
 
 // core/loadconfig.js
-;(function() {
-  UE.Editor.prototype.loadServerConfig = function() {
+    (function () {
+        UE.Editor.prototype.loadServerConfig = function() {
     var me = this;
     setTimeout(function() {
       try {
@@ -9465,14 +9448,9 @@ var filterWord = (UE.filterWord = (function() {
  * @since 1.2.6.1
  */
 
-/**
- * UEditor公用空间，UEditor所有的功能都挂载在该空间下
- * @unfile
- * @module UE
- */
 
-;(function() {
-  /**
+(function () {
+    /**
      * 编辑器模拟的节点类
      * @unfile
      * @module UE
@@ -10826,9 +10804,9 @@ var LocalStorage = (UE.LocalStorage = (function() {
     };
   }
 })());
-
-;(function() {
-  var ROOTKEY = "ueditor_preference";
+    
+(function () {
+        var ROOTKEY = "ueditor_preference";
 
   UE.Editor.prototype.setPreferences = function(key, value) {
     var obj = {};
@@ -14012,13 +13990,8 @@ UE.plugins["paragraph"] = function () {
 
 
 // plugins/directionality.js
-/**
- * 设置文字输入的方向的插件
- * @file
- * @since 1.2.6.1
- */
-;(function() {
-  var block = domUtils.isBlockElm,
+    (function () {
+        var block = domUtils.isBlockElm,
     getObj = function(editor) {
       //            var startNode = editor.selection.getStart(),
       //                parents;
@@ -17297,7 +17270,7 @@ UE.plugins["list"] = function() {
             me.fireEvent("contentchange");
             me.fireEvent("saveScene");
             domUtils.preventDefault(evt);
-            return;
+            
           }
         }
       }
@@ -17846,14 +17819,9 @@ UE.plugins["list"] = function() {
 
 
 // plugins/source.js
-/**
- * 源码编辑插件
- * @file
- * @since 1.2.6.1
- */
-
-;(function() {
-  var sourceEditors = {
+    
+(function () {
+        var sourceEditors = {
     textarea: function(editor, holder) {
       var textarea = holder.ownerDocument.createElement("textarea");
       textarea.style.cssText =
@@ -19809,13 +19777,8 @@ UE.plugins["video"] = function() {
  * Time: 上午11:09
  * To change this template use File | Settings | File Templates.
  */
-/**
- * UE表格操作类
- * @param table
- * @constructor
- */
-;(function() {
-  var UETable = (UE.UETable = function(table) {
+(function () {
+    var UETable = (UE.UETable = function(table) {
     this.table = table;
     this.indexTable = [];
     this.selectedTds = [];
@@ -21159,15 +21122,8 @@ UE.plugins["video"] = function() {
 
 
 // plugins/table.cmds.js
-/**
- * Created with JetBrains PhpStorm.
- * User: taoqili
- * Date: 13-2-20
- * Time: 下午6:25
- * To change this template use File | Settings | File Templates.
- */
-;(function() {
-  var UT = UE.UETable,
+    (function () {
+        var UT = UE.UETable,
     getTableItemsByRange = function(editor) {
       return UT.getTableItemsByRange(editor);
     },
@@ -27821,8 +27777,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/uiutils.js
-;(function() {
-  var browser = baidu.editor.browser,
+    (function () {
+        var browser = baidu.editor.browser,
     domUtils = baidu.editor.dom.domUtils;
 
   var magic = "$EDITORUI";
@@ -28097,8 +28053,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/uibase.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     EventBase = baidu.editor.EventBase,
     UIBase = (baidu.editor.ui.UIBase = function() {});
@@ -28182,8 +28138,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/separator.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     Separator = (baidu.editor.ui.Separator = function(options) {
       this.initOptions(options);
@@ -28205,8 +28161,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/mask.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     domUtils = baidu.editor.dom.domUtils,
     UIBase = baidu.editor.ui.UIBase,
     uiUtils = baidu.editor.ui.uiUtils;
@@ -28261,8 +28217,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/popup.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     domUtils = baidu.editor.dom.domUtils,
     UIBase = baidu.editor.ui.UIBase,
@@ -28532,8 +28488,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/colorpicker.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     ColorPicker = (baidu.editor.ui.ColorPicker = function(options) {
       this.initOptions(options);
@@ -28633,8 +28589,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/tablepicker.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     UIBase = baidu.editor.ui.UIBase;
 
@@ -28736,8 +28692,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/stateful.js
-;(function() {
-  var browser = baidu.editor.browser,
+    (function () {
+        var browser = baidu.editor.browser,
     domUtils = baidu.editor.dom.domUtils,
     uiUtils = baidu.editor.ui.uiUtils;
 
@@ -28852,8 +28808,8 @@ UE.ui = baidu.editor.ui = {};
 ///import core
 ///import uicore
 ///import ui/stateful.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     Stateful = baidu.editor.ui.Stateful,
     Button = (baidu.editor.ui.Button = function(options) {
@@ -28935,8 +28891,8 @@ UE.ui = baidu.editor.ui = {};
 ///import core
 ///import uicore
 ///import ui/stateful.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     domUtils = baidu.editor.dom.domUtils,
     UIBase = baidu.editor.ui.UIBase,
@@ -29039,8 +28995,8 @@ UE.ui = baidu.editor.ui = {};
 ///import ui/colorpicker.js
 ///import ui/popup.js
 ///import ui/splitbutton.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     ColorPicker = baidu.editor.ui.ColorPicker,
     Popup = baidu.editor.ui.Popup,
@@ -29103,8 +29059,8 @@ UE.ui = baidu.editor.ui = {};
 ///import ui/popup.js
 ///import ui/tablepicker.js
 ///import ui/splitbutton.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     TablePicker = baidu.editor.ui.TablePicker,
     SplitButton = baidu.editor.ui.SplitButton,
@@ -29139,8 +29095,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/autotypesetpicker.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase;
 
   var AutoTypeSetPicker = (baidu.editor.ui.AutoTypeSetPicker = function(
@@ -29315,8 +29271,8 @@ UE.ui = baidu.editor.ui = {};
 ///import ui/popup.js
 ///import ui/autotypesetpicker.js
 ///import ui/splitbutton.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     AutoTypeSetPicker = baidu.editor.ui.AutoTypeSetPicker,
     SplitButton = baidu.editor.ui.SplitButton,
@@ -29466,8 +29422,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/cellalignpicker.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     Stateful = baidu.editor.ui.Stateful,
     UIBase = baidu.editor.ui.UIBase;
@@ -29568,8 +29524,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/pastepicker.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Stateful = baidu.editor.ui.Stateful,
     uiUtils = baidu.editor.ui.uiUtils,
     UIBase = baidu.editor.ui.UIBase;
@@ -29640,8 +29596,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/toolbar.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     UIBase = baidu.editor.ui.UIBase,
     Toolbar = (baidu.editor.ui.Toolbar = function(options) {
@@ -29696,8 +29652,8 @@ UE.ui = baidu.editor.ui = {};
 ///import uicore
 ///import ui\popup.js
 ///import ui\stateful.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     domUtils = baidu.editor.dom.domUtils,
     uiUtils = baidu.editor.ui.uiUtils,
     UIBase = baidu.editor.ui.UIBase,
@@ -29979,8 +29935,8 @@ UE.ui = baidu.editor.ui = {};
 ///import uicore
 ///import ui/menu.js
 ///import ui/splitbutton.js
-;(function() {
-  // todo: menu和item提成通用list
+    (function () {
+        // todo: menu和item提成通用list
   var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     Menu = baidu.editor.ui.Menu,
@@ -30081,8 +30037,8 @@ UE.ui = baidu.editor.ui = {};
 ///import uicore
 ///import ui/mask.js
 ///import ui/button.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     domUtils = baidu.editor.dom.domUtils,
     uiUtils = baidu.editor.ui.uiUtils,
     Mask = baidu.editor.ui.Mask,
@@ -30533,8 +30489,8 @@ UE.ui = baidu.editor.ui = {};
 ///import uicore
 ///import ui/menu.js
 ///import ui/splitbutton.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Menu = baidu.editor.ui.Menu,
     SplitButton = baidu.editor.ui.SplitButton,
     MenuButton = (baidu.editor.ui.MenuButton = function(options) {
@@ -30574,8 +30530,8 @@ UE.ui = baidu.editor.ui = {};
 ///import core
 ///import uicore
 ///commands 表情
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     SplitButton = baidu.editor.ui.SplitButton,
     MultiMenuPop = (baidu.editor.ui.MultiMenuPop = function(options) {
@@ -30619,8 +30575,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/shortcutmenu.js
-;(function() {
-  var UI = baidu.editor.ui,
+    (function () {
+        var UI = baidu.editor.ui,
     UIBase = UI.UIBase,
     uiUtils = UI.uiUtils,
     utils = baidu.editor.utils,
@@ -30867,8 +30823,8 @@ UE.ui = baidu.editor.ui = {};
 
 
 // ui/breakline.js
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     Breakline = (baidu.editor.ui.Breakline = function(options) {
       this.initOptions(options);
@@ -30890,8 +30846,8 @@ UE.ui = baidu.editor.ui = {};
 // ui/message.js
 ///import core
 ///import uicore
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     domUtils = baidu.editor.dom.domUtils,
     UIBase = baidu.editor.ui.UIBase,
     Message = (baidu.editor.ui.Message = function(options) {
@@ -30979,8 +30935,8 @@ UE.ui = baidu.editor.ui = {};
 //ui跟编辑器的适配層
 //那个按钮弹出是dialog，是下拉筐等都是在这个js中配置
 //自己写的ui也要在这里配置，放到baidu.editor.ui下边，当编辑器实例化的时候会根据neditor.config中的toolbars找到相应的进行实例化
-;(function() {
-  var utils = baidu.editor.utils;
+    (function () {
+        var utils = baidu.editor.utils;
   var editorui = baidu.editor.ui;
   var _Dialog = editorui.Dialog;
   editorui.buttons = {};
@@ -31985,8 +31941,8 @@ UE.ui = baidu.editor.ui = {};
 ///commands 全屏
 ///commandsName FullScreen
 ///commandsTitle  全屏
-;(function() {
-  var utils = baidu.editor.utils,
+    (function () {
+        var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     UIBase = baidu.editor.ui.UIBase,
     domUtils = baidu.editor.dom.domUtils;
@@ -32625,7 +32581,7 @@ UE.ui = baidu.editor.ui = {};
           buff[i] = this.formatHtml(
             '<span unselectable="on" onclick="$$.editor.execCommand(&quot;elementpath&quot;, &quot;' +
               i +
-              '&quot;);">' +
+              '&quot;)">' +
               ci +
               "</span>"
           );

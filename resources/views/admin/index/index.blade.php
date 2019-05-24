@@ -5,7 +5,7 @@
     <!-- partial -->
 
 
-        
+
         <!-- partial -->
 
             <div class="content-wrapper">
@@ -33,7 +33,7 @@
                                 <h4 class="font-weight-normal mb-3">文章数量
                                     <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5"></h2>
+                                <h2 class="mb-5">{{$newscount}}</h2>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                                 <h4 class="font-weight-normal mb-3">产品数量
                                     <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5"></h2>
+                                <h2 class="mb-5">{{$productcount}}</h2>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 <h4 class="font-weight-normal mb-3">案例数量
                                     <i class="mdi mdi-diamond mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5"></h2>
+                                <h2 class="mb-5">{{$casescount}}</h2>
                             </div>
                         </div>
                     </div>
@@ -64,8 +64,14 @@
                     <div class="col-md-7 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">蜘蛛来访</h4>
+                                <h4 class="card-title">管理员来访</h4>
                                 <hr>
+                                <?php
+                                $color = ['badge-primary','badge-danger','badge-info','badge-success'];
+                                ?>
+                                @foreach($spider as $item)
+                                    <p>{{$item->spidername}}管理员：<span class="float-right badge badge-pill {{$color[rand(0,3)]}}">来访时间：{{$item->updated_at}}</span></p>
+                                @endforeach
 
                             </div>
                         </div>
@@ -75,7 +81,7 @@
             </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
-            
+
             <!-- partial -->
         </div>
         <!-- main-panel ends -->

@@ -32,7 +32,7 @@
           }
         }
       }
-    })
+    });
 
     //Close other submenu in sidebar on opening any
 

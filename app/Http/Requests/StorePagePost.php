@@ -30,4 +30,12 @@ class StorePagePost extends FormRequest
         ];
     }
 
+    public function messages(){
+        return[
+            'title.required' => '标题不能为空',
+            'type.required' => '类型不能为空',
+            'file.image' => '文件上传只能是图片',
+        ];
+    }
+
 }

@@ -312,7 +312,7 @@
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url';;
+            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url';
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
             videoObjs.push({
@@ -400,8 +400,7 @@
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('videoActionName')),
                 fileMaxSize = editor.getOpt('videoMaxSize'),
-                acceptExtensions = (editor.getOpt('videoAllowFiles') || [".mp4", ".webm", ".flv", ".ogg", ".f4v"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
-
+                acceptExtensions = (editor.getOpt('videoAllowFiles') || [".mp4", ".webm", ".flv", ".ogg", ".f4v"]).join('').replace(/\./g, ',').replace(/^[,]/, '');
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;

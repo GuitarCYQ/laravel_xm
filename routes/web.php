@@ -11,13 +11,15 @@
 |
 */
 
+use Illuminate\Http\Request;
 
-Route::get('/',function(){
-   return view('welcome');
+Route::name("index.")->group(function(){
+    Route::get("/","Home\IndexController@index")->name('home');
+    Route::get('/cases','Home\CasesController@index')->name("cases.list");
 });
 
 //后台
-Route::prefix('admin')->name('admin.')->group(function  ()  {
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function  ()  {
     Route::get('/',  "Admin\IndexController@index")->name('home');
     Route::get('/index',  "Admin\IndexController@index")->name('home');
 
@@ -63,11 +65,24 @@ Route::prefix('admin')->name('admin.')->group(function  ()  {
     //轮播图模块
     Route::resource("/banner","Admin\BannerController")->except(['show']);
 
+    //轮播图分类
+    Route::resource("/banneritem","Admin\BanneritemController")->except(['show']);
+    Route::post('/banneritem/setsort',"Admin\BanneritemController@setsort")->name('banneritem.setsort');
 
+    //友情链接
+    Route::resource("/friend","Admin\FriendController")->except(['show']);
 
-
+    //Login
+    Route::get("/login","Admin\LoginController@login")->name('login.login');
+	
+	//图片上传
+//    Route::post('/upload','Admin\IndexController@imgupload')->name("upload");
 
 });
+//后台登录
+Route::get('admin/login','Admin\LoginController@login')->name('admin.login.login');
+Route::post('admin/dologin','Admin\LoginController@dologin')->name('admin.login.dologin');
+
 
 
 
